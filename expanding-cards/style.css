@@ -1,0 +1,17 @@
+.card img{
+    height: 30rem;
+    width: 7rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10rem;
+}
+
+.card.active img{
+    width: 50rem ;
+}

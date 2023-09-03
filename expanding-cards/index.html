@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>expanding-cards</title>
+</head>
+<body>
+    <div class="container">
+    <div class="card card1 active">
+        <img src="https://images.unsplash.com/photo-1466285746891-30d1cd3a5409?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+    </div>
+    <div class="card card2">
+        <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+    </div>
+    <div class="card card3">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="">
+    </div>
+    <div class="card card4">
+        <img src="https://images.unsplash.com/photo-1582761370596-77a6a42350d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+    </div>
+    <div class="card card5">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW5zfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+</div>
+    <script>
+
+        const card = document.querySelectorAll('.card');
+
+        card.forEach(card =>{
+            
+            card.addEventListener('click' , () =>{
+                removerActiveClass();
+                card.classList.add('active');
+            })
+
+        })
+
+    function removerActiveClass() {
+        card.forEach(card =>{
+            card.classList.remove('active')
+        })
+    }
+
+    </script>
+</body>
+</html>
