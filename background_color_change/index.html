@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Background Color Change</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Website</h1>
+        <h3>Click on below button to change the color of the wesite</h3>
+        <button class="btn">Click Me</button>
+    </div>
+
+    <script>
+        const button = document.querySelector('.btn');
+        const body = document.getElementsByTagName('body')[0];
+
+        // Random hex color code generator
+        let colorCode = '0123456789abcdef'
+
+        function generateColor() {
+            let chars = '#'
+            for (let i = 0; i < 6; i++) {
+                const randomColor = colorCode[Math.floor(Math.random() * 17)];
+                chars += randomColor
+            }
+            body.setAttribute('style' , `background-color: ${chars}`);
+        }
+
+        // Click function
+        button.addEventListener('click', () => {
+            generateColor();
+        })
+        
+    </script>
+</body>
+
+</html>
